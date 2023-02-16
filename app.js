@@ -28,7 +28,7 @@ app.use(function (req, res, next) {
 
 app.use(
   cors({
-    origin: 'https://spectacular-biscuit-69b07d.netlify.app',
+    origin: 'https://rad-beignet-2af5da.netlify.app',
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true,
