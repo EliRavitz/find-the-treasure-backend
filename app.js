@@ -37,7 +37,7 @@ app.use(
 
 // 1) GLOBAL MIDDLEWARES
 // Set security HTTP headers - good to prevent cross-site scripting attacks
-app.use(helmet())
+app.use(helmet({ crossOriginResourcePolicy: false }))
 
 // Development logging
 if (process.env.NODE_ENV === 'development') {
