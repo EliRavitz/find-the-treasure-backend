@@ -87,7 +87,6 @@ exports.removeBackground = catchAsync(async (req, res, next) => {
         image: fs.createReadStream(`public/img/users/${req.file.filename}`),
         format: 'result',
         test: 'true',
-        // test: process.env.NODE_ENV === 'development' ? 'true' : 'false',
       },
       auth: {
         user: process.env.CLIPPING_MAGIC_USER,
