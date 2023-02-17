@@ -1,4 +1,6 @@
 const User = require('./../models/userModel')
+const Game = require('../models/gameModel')
+const Player = require('../models/playerModel')
 
 const catchAsync = require('./../utils/catchAsync')
 const AppError = require('./../utils/appError')
@@ -28,7 +30,6 @@ exports.getMe = catchAsync(async (req, res, next) => {
 
 exports.updateMe = catchAsync(async (req, res, next) => {
   // 1) Create error if user POSTs password data
-  console.log('11111')
   if (req.body.password || req.body.passwordConfirm) {
     return next(
       new AppError(
@@ -39,7 +40,7 @@ exports.updateMe = catchAsync(async (req, res, next) => {
   }
 
   // 2) Filtered out unwanted fields names that are not allowed to be updated
-  const filteredBody = filterObj(req.body, 'name', 'email', 'games')
+  const filteredBody = filterObj(req.body, 'name', 'email', 'games', 'active')
 
   // 3) Update user document
   let updatedUser = ''
@@ -66,6 +67,23 @@ exports.updateMe = catchAsync(async (req, res, next) => {
       new: true,
       runValidators: true,
     })
+
+    const deleteGameEndPleyers = catchAsync(async (game) => {
+      await Game.findByIdAndDelete(game._id)
+      await Player.deleteMany({ gameId: game._id })
+    })
+
+    if (req.body.active === false && updatedUser.games) {
+      updatedUser.games.forEach((game) => {
+        deleteGameEndPleyers(game)
+      })
+    }
+    if (req.body.active === false && updatedUser.players) {
+      updatedUser.players.forEach((player) => {
+        console.log('2')
+        deleteItem(player, Player)
+      })
+    }
   }
 
   res.status(200).json({
