@@ -108,7 +108,8 @@ exports.removeBackground = catchAsync(async (req, res, next) => {
         let imageId = response.caseless.get('x-amz-meta-id')
         let imageSecret = response.caseless.get('x-amz-meta-secret')
 
-        fs.writeFileSync(`public/img/tmp/${req.file.filename}`, body)
+        fs.writeFileSync(`tmp/${req.file.filename}`, body)
+        // fs.writeFileSync(`public/img/users/${req.file.filename}`, body)
       }
     }
   )
