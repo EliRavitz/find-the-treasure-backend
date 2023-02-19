@@ -4,9 +4,8 @@
   "description": "find the treasure website",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js",
-    "prod": "set NODE_ENV=production&& nodemon server.js",
+    "start": "nodemon server.js",
+    "start:prod": "set NODE_ENV=production&& nodemon server.js",
     "debug": "ndb server.js"
   },
   "author": "eli ravitz",
