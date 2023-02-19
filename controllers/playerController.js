@@ -8,6 +8,7 @@ const Player = require('../models/playerModel')
 const factory = require('./handlerFactory')
 const catchAsync = require('../utils/catchAsync')
 const AppError = require('./../utils/appError')
+const { setTimeout } = require('timers/promises')
 
 exports.getAllPlayer = factory.getAll(Player)
 exports.getPlayer = factory.getOne(Player)
@@ -78,7 +79,6 @@ exports.resizePlayerPhoto = catchAsync(async (req, res, next) => {
 })
 
 exports.removeBackground = catchAsync(async (req, res, next) => {
-  console.log(req.file)
   if (!req.file) return next()
   request.post(
     {
@@ -124,6 +124,7 @@ exports.createPlayer = catchAsync(async (req, res, next) => {
     LatLng: req.body.LatLng,
     gameId: req.body.gameId,
   })
+
   player.save().then((result) => {
     res.status(201).json({
       status: 'success',
