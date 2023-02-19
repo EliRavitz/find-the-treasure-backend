@@ -11,17 +11,18 @@ module.exports = class Email {
   }
 
   newTransport() {
-    if (process.env.NODE_ENV === 'production') {
-      console.log('okkkk')
-      return nodemailer.createTransport({
-        host: process.env.MAILGUN_HOST,
-        port: process.env.MAILGUN_PORT,
-        auth: {
-          user: process.env.MAILGUN_USERNAME,
-          pass: process.env.MAILGUN_PASSWORD,
-        },
-      })
-    }
+    // I haven't finished logging in to the MAILGUN website, so for now I'm not logged in
+
+    // if (process.env.NODE_ENV === 'production') {
+    //   return nodemailer.createTransport({
+    //     host: process.env.MAILGUN_HOST,
+    //     port: process.env.MAILGUN_PORT,
+    //     auth: {
+    //       user: process.env.MAILGUN_USERNAME,
+    //       pass: process.env.MAILGUN_PASSWORD,
+    //     },
+    //   })
+    // }
 
     return nodemailer.createTransport({
       host: process.env.EMAIL_HOST,
