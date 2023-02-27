@@ -36,11 +36,6 @@ so there can be problems sometimes when building a game / trying to play a game 
 This bug will be fixed later.
 Therefore, in the meantime, to ensure smooth operation, it is recommended to use the website via a computer.
 
-3. Because I built this game in stages while learning (I built the client side before I knew how the server side works
-and how to connect the client to the server). 
-So there are some small points that are not built in the best way and I didn't change them because it required too much work and time. 
-So if you don't see it then everything is fine but if you have seen it then you will know why :)
-
 Game instructions:
 
 Game admin
