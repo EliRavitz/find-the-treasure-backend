@@ -14,6 +14,7 @@ Our game allows you to build your own find-the-treasure game,
 wherever you want – whether in your neighborhood or somewhere else around the globe. 
 It’s a very small world… and you are the boss😉
 You can play with your friends or family, build your own game path, plant your clues along the way and let them all go wild 😉 
+
 Feel it yourself:
 
 In order to enter the game manager's area without registration, 
