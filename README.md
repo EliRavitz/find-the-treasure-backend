@@ -6,16 +6,19 @@ https://rad-beignet-2af5da.netlify.app/
 
 About this game:
 
-Remember that “find the treasure game” we used to play as kids? When we hid clues and let our friends follow the arrows toward the hidden 2-dollar prize? 
+Remember that “find the treasure game” we used to play as kids? 
+When we hid clues and let our friends follow the arrows toward the hidden 2-dollar prize? 
 Well, welcome back to childhood 🥳
 This game is all about this childhood nostalgy, but much better😊
 Our game allows you to build your own find-the-treasure game, 
-wherever you want – whether it your neighborhood or somewhere else around the globe. It’s a very small world… and you are the boss😉
+wherever you want – whether in your neighborhood or somewhere else around the globe. 
+It’s a very small world… and you are the boss😉
 You can play with your friends or family, build your own game path, plant your clues along the way and let them all go wild 😉 
 
 Feel it yourself:
 
-In order to enter the game manager's area without registration, I put a button on the home page on the top right "Free passage for visitors" that allows free entry. 
+In order to enter the game manager's area without registration, 
+I put a button on the home page on the top right "Free passage for visitors" that allows free entry. 
 Inside this user there is a ready-made game called " game 1- do not delete " which gives the possibility to see a ready-made game, 
 please do not change it, but you can set up as many additional games as you want :)
 
