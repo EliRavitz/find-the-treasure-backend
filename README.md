@@ -1,28 +1,16 @@
-# find-the-treasure-backend
 # find-the-treasure-frontend
 
 Link to the game: 
 https://rad-beignet-2af5da.netlify.app/
 
-About this game:
-
-Remember that “find the treasure game” we used to play as kids? 
-When we hid clues and let our friends follow the arrows toward the hidden 2-dollar prize? 
-Well, welcome back to childhood 🥳
-This game is all about this childhood nostalgy, but much better😊
-Our game allows you to build your own find-the-treasure game, 
-wherever you want – whether in your neighborhood or somewhere else around the globe. 
-It’s a very small world… and you are the boss😉
-You can play with your friends or family, build your own game path, plant your clues along the way and let them all go wild 😉 
-
-Feel it yourself:
+**Feel it yourself:**
 
 In order to enter the game manager's area without registration, 
 I put a button on the home page on the top right "Free passage for visitors" that allows free entry. 
 Inside this user there is a ready-made game called " game 1- do not delete " which gives the possibility to see a ready-made game, 
 please do not change it, but you can set up as many additional games as you want :)
 
-Good to know:
+**Good to know:**
 
 Some technical drilldown
 1. We used Leaflet for geo location and map.
@@ -36,7 +24,18 @@ so there can be problems sometimes when building a game / trying to play a game 
 This bug will be fixed later.
 Therefore, in the meantime, to ensure smooth operation, it is recommended to use the website via a computer.
 
-Game instructions:
+**About this game:**
+
+Remember that “find the treasure game” we used to play as kids? 
+When we hid clues and let our friends follow the arrows toward the hidden 2-dollar prize? 
+Well, welcome back to childhood 🥳
+This game is all about this childhood nostalgy, but much better😊
+Our game allows you to build your own find-the-treasure game, 
+wherever you want – whether in your neighborhood or somewhere else around the globe. 
+It’s a very small world… and you are the boss😉
+You can play with your friends or family, build your own game path, plant your clues along the way and let them all go wild 😉 
+
+**Game instructions:**
 
 Game admin
 Sign up at FindTheTreasure admin portal.
