@@ -24,6 +24,10 @@ so there can be problems sometimes when building a game / trying to play a game 
 This bug will be fixed later.
 Therefore, in the meantime, to ensure smooth operation, it is recommended to use the website via a computer.
 
+3. Players have the option to upload profile pictures and with the help of an external API the game removes the background of the picture
+so that it does not interfere when it appears on the map.
+In order to avoid unnecessary payments at this stage, a certain inscription remains instead of the background.
+
 **About this game:**
 
 Remember that “find the treasure game” we used to play as kids? 
