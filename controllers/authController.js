@@ -139,7 +139,10 @@ exports.forgotPassword = catchAsync(async (req, res, next) => {
 
   // 3) Send it to user's email
   try {
-    const resetURL = `${process.env.CLIENT_SIDE_DOMAIN}/reset-password/${resetToken}`
+    const resetURL =
+      process.env.NODE_ENV === 'production'
+        ? `${process.env.CLIENT_SIDE_DOMAIN}/reset-password/${resetToken}`
+        : `http://localhost:3000/reset-password/${resetToken}`
 
     await new Email(user, resetURL).sendPasswordReset()
 
@@ -148,6 +151,7 @@ exports.forgotPassword = catchAsync(async (req, res, next) => {
       message: 'Token sent to email!',
     })
   } catch (err) {
+    console.log('err!!!!!!!', err)
     user.passwordResetToken = undefined
     user.passwordResetExpires = undefined
     await user.save({ validateBeforeSave: false })
