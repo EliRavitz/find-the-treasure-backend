@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon server.js",
-    "start:prod": "set NODE_ENV=production&& nodemon server.js",
+    "start:prod": "set NODE_ENV=production",
     "debug": "ndb server.js"
   },
   "author": "eli ravitz",
