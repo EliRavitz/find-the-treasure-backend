@@ -15,14 +15,6 @@ const playerRouter = require('./routes/playerRoutes')
 
 const app = express()
 
-app.use(
-  cors({
-    origin: 'https://rad-beignet-2af5da.netlify.app',
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    allowedHeaders: ['Content-Type', 'Authorization'],
-    credentials: true,
-  })
-)
 app.use(function (req, res, next) {
   res.header('Access-Control-Allow-Origin', req.headers.origin)
   res.header('Access-Control-Allow-Credentials', true)
@@ -35,14 +27,23 @@ app.use(function (req, res, next) {
   next()
 })
 
+app.use(
+  cors({
+    origin: 'https://rad-beignet-2af5da.netlify.app',
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true,
+  })
+)
+
 // 1) GLOBAL MIDDLEWARES
 // Set security HTTP headers - good to prevent cross-site scripting attacks
 app.use(helmet({ crossOriginResourcePolicy: false }))
 
 // Development logging
-// if (process.env.NODE_ENV === 'development') {
-app.use(morgan('dev'))
-// }
+if (process.env.NODE_ENV === 'development') {
+  app.use(morgan('dev'))
+}
 
 // Limit requests from same API
 const limiter = rateLimit({
