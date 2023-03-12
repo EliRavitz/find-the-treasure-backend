@@ -124,6 +124,7 @@ exports.restrictTo = (...roles) => {
 exports.forgotPassword = catchAsync(async (req, res, next) => {
   // 1) Get user based on POSTed email
   const user = await User.findOne({ email: req.body.email })
+
   if (!user) {
     return next(
       new AppError(
@@ -141,8 +142,8 @@ exports.forgotPassword = catchAsync(async (req, res, next) => {
   try {
     const resetURL =
       process.env.NODE_ENV === 'development'
-        ? (resetURL = `http://localhost:3000/reset-password/${resetToken}`)
-        : (resetURL = `${process.env.CLIENT_SIDE_DOMAIN}/reset-password/${resetToken}`)
+        ? `http://localhost:3000/reset-password/${resetToken}`
+        : `${process.env.CLIENT_SIDE_DOMAIN}/reset-password/${resetToken}`
 
     await new Email(user, resetURL).sendPasswordReset()
     res.status(200).json({
