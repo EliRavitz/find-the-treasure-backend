@@ -25,19 +25,13 @@ module.exports = class Email {
     // }
 
     return nodemailer.createTransport({
-      host: 'smtp.gmail.com',
-      port: 587,
+      host: process.env.EMAIL_HOST,
+      port: process.env.EMAIL_PORT,
       secure: false,
       auth: {
-        user: 'eliravitz2@gmail.com',
-        pass: 'yqqcfbqkbahkmyki',
+        user: process.env.EMAIL_USERNAME,
+        pass: process.env.EMAIL_PASSWORD,
       },
-      // host: process.env.EMAIL_HOST,
-      // port: process.env.EMAIL_PORT,
-      // auth: {
-      //   user: process.env.EMAIL_USERNAME,
-      //   pass: process.env.EMAIL_PASSWORD,
-      // },
     })
   }
 
