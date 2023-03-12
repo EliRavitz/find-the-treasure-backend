@@ -28,6 +28,11 @@ Therefore, in the meantime, to ensure smooth operation, it is recommended to use
 so that it does not interfere when it appears on the map.
 In order to avoid unnecessary payments at this stage, a certain inscription remains instead of the background.
 
+4. When you register or click on the "forgot password" button, an email is sent. I prepared to use a third-party provider to send the email like mailgun, 
+but I didn't add it because their registration is long and complex (because of the spam laws they are subject to) 
+and it seems unnecessary for a project intended for display.
+so the email is sent from a regular gmail account.
+
 **About this game:**
 
 Remember that “find the treasure game” we used to play as kids? 
