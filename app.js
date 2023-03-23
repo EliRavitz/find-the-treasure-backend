@@ -17,8 +17,7 @@ const app = express()
 
 app.use(
   cors({
-    origin: '*',
-    // origin: 'https://rad-beignet-2af5da.netlify.app',
+    origin: 'https://rad-beignet-2af5da.netlify.app',
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true,
